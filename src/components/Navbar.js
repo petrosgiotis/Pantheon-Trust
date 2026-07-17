@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav className={`nav${solid ? " solid" : ""}`}>
       <a href="#home" className="nav-logo">
-        <img src="/images/logo.jpg" alt="Pantheon Trust Group" 
+        <img src={process.env.PUBLIC_URL + "/images/logo.jpg"} alt="Pantheon Trust Group" 
           onError={e => { e.target.style.display='none'; e.target.nextSibling.style.display='block'; }}
         />
         <span className="nav-logo-text" style={{display:'none'}}>

@@ -15,7 +15,7 @@ export default function Brokerage() {
           <p className="sh-sub">{en ? "Exclusive residential, commercial and land transactions across Athens and the Greek islands." : "Αποκλειστικές αγοραπωλησίες κατοικιών, επαγγελματικών χώρων και γης σε Αθήνα και νησιά."}</p>
         </div>
         <div className="sh-img">
-          <img src="/images/brokerage1.jpg" alt="" />
+          <img src={process.env.PUBLIC_URL + "/images/brokerage1.jpg"} alt="" />
         </div>
       </div>
 

@@ -4,7 +4,7 @@ import { useLang } from "../context/LanguageContext";
 const services = [
   {
     to: "/partners/brokerage",
-    img: "/images/brokerage1.jpg",
+    img: `${process.env.PUBLIC_URL}/images/brokerage1.jpg`,
     tag: "Brokerage",
     tagGr: "Μεσιτεία",
     title: "Property Listings",
@@ -14,7 +14,7 @@ const services = [
   },
   {
     to: "/partners/constructions",
-    img: "/images/construction1.jpg",
+    img: `${process.env.PUBLIC_URL}/images/construction1.jpg`,
     tag: "Constructions",
     tagGr: "Κατασκευές",
     title: "Our Projects",
@@ -24,7 +24,7 @@ const services = [
   },
   {
     to: "/partners/management",
-    img: "/images/airbnb1_living.jpg",
+    img: `${process.env.PUBLIC_URL}/images/airbnb1_living.jpg`,
     tag: "Property Management",
     tagGr: "Διαχείριση Ακινήτων",
     title: "Asset Management",
@@ -34,7 +34,7 @@ const services = [
   },
   {
     to: "/partners/yachting",
-    img: "/images/yacht-frog.jpg",
+    img: `${process.env.PUBLIC_URL}/images/yacht-frog.jpg`,
     tag: "Private Yachting",
     tagGr: "Ιδιωτικό Yachting",
     title: "Yacht Charter",
@@ -52,7 +52,7 @@ export default function PartnersHome() {
     <div className="portal-page">
       {/* Hero */}
       <div className="portal-hero">
-        <img src="/images/brokerage2.jpg" alt="" className="portal-hero-bg" />
+        <img src={process.env.PUBLIC_URL + "/images/brokerage2.jpg"} alt="" className="portal-hero-bg" />
         <div className="portal-hero-overlay" />
         <div className="portal-hero-content">
           <div className="ph-badge">{en ? "For Professionals" : "Για Επαγγελματίες"}</div>

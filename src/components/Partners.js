@@ -17,7 +17,7 @@ export default function Partners() {
       <div style={{maxWidth:"1300px",margin:"0 auto 6rem"}}>
         <div style={{display:"grid",gridTemplateColumns:"1.1fr 0.9fr",gap:"3px",alignItems:"stretch"}}>
           <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gridTemplateRows:"1fr 1fr",gap:"3px",height:"540px"}}>
-            {["/images/brokerage1.jpg","/images/brokerage2.jpg","/images/brokerage3.jpg","/images/brokerage4.jpg"].map((src,i) => (
+            {[`${process.env.PUBLIC_URL}/images/brokerage1.jpg`,`${process.env.PUBLIC_URL}/images/brokerage2.jpg`,`${process.env.PUBLIC_URL}/images/brokerage3.jpg`,`${process.env.PUBLIC_URL}/images/brokerage4.jpg`].map((src,i) => (
               <div key={i} className="c-img" style={{height:"auto"}}>
                 <img src={src} alt="" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} />
               </div>
@@ -48,12 +48,12 @@ export default function Partners() {
           </div>
           <div style={{display:"grid",gridTemplateRows:"1fr 1fr",gap:"3px",height:"540px"}}>
             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"3px"}}>
-              <div className="c-img" style={{height:"100%"}}><img src="/images/construction1.jpg" alt="" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} /></div>
-              <div className="c-img" style={{height:"100%"}}><img src="/images/construction2.jpg" alt="" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} /></div>
+              <div className="c-img" style={{height:"100%"}}><img src={process.env.PUBLIC_URL + "/images/construction1.jpg"} alt="" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} /></div>
+              <div className="c-img" style={{height:"100%"}}><img src={process.env.PUBLIC_URL + "/images/construction2.jpg"} alt="" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} /></div>
             </div>
             <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"3px"}}>
-              <div className="c-img" style={{height:"100%"}}><img src="/images/construction3.jpg" alt="" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} /></div>
-              <div className="c-img" style={{height:"100%"}}><img src="/images/construction4.jpg" alt="" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} /></div>
+              <div className="c-img" style={{height:"100%"}}><img src={process.env.PUBLIC_URL + "/images/construction3.jpg"} alt="" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} /></div>
+              <div className="c-img" style={{height:"100%"}}><img src={process.env.PUBLIC_URL + "/images/construction4.jpg"} alt="" style={{width:"100%",height:"100%",objectFit:"cover",display:"block"}} /></div>
             </div>
           </div>
         </div>
@@ -63,8 +63,8 @@ export default function Partners() {
       <div style={{maxWidth:"1300px",margin:"0 auto"}}>
         <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:"3px"}}>
           {[
-            { label: p.mgmt.t1, bg:"var(--green)", img:"/images/airbnb1_balcony.jpg" },
-            { label: p.mgmt.t2, bg:"var(--navy)", img:"/images/brokerage1.jpg" },
+            { label: p.mgmt.t1, bg:"var(--green)", img:`${process.env.PUBLIC_URL}/images/airbnb1_balcony.jpg` },
+            { label: p.mgmt.t2, bg:"var(--navy)", img:`${process.env.PUBLIC_URL}/images/brokerage1.jpg` },
           ].map((item,i) => (
             <div key={i} style={{position:"relative",height:"360px",overflow:"hidden",cursor:"pointer"}}
               className="c-img">

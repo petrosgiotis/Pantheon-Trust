@@ -34,7 +34,7 @@ export default function SiteNav() {
       <div className="sitenav-inner">
         {/* Logo */}
         <Link to="/" className="sitenav-logo">
-          <img src="/images/logo.jpg" alt="Pantheon Trust Group"
+          <img src={process.env.PUBLIC_URL + "/images/logo.jpg"} alt="Pantheon Trust Group"
             onError={e => { e.target.style.display = "none"; e.target.nextSibling.style.display = "block"; }}
           />
           <span className="sitenav-logo-text" style={{ display: "none" }}>

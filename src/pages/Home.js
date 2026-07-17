@@ -7,7 +7,7 @@ import { useAdminData } from "../context/AdminDataContext";
 const services = [
   {
     to: "/partners/brokerage",
-    photo: "/images/brokerage1.jpg",
+    photo: `${process.env.PUBLIC_URL}/images/brokerage1.jpg`,
     tag: "Brokerage",
     tagGr: "Μεσιτεία",
     title: "Property Listings",
@@ -17,7 +17,7 @@ const services = [
   },
   {
     to: "/partners/constructions",
-    photo: "/images/construction1.jpg",
+    photo: `${process.env.PUBLIC_URL}/images/construction1.jpg`,
     tag: "Constructions",
     tagGr: "Κατασκευές",
     title: "Our Projects",
@@ -27,7 +27,7 @@ const services = [
   },
   {
     to: "/partners/management",
-    photo: "/images/koukaki_living.jpg",
+    photo: `${process.env.PUBLIC_URL}/images/koukaki_living.jpg`,
     tag: "Management",
     tagGr: "Διαχείριση",
     title: "Property Management",
@@ -37,7 +37,7 @@ const services = [
   },
   {
     to: "/partners/completed",
-    photo: "/images/cp_emerald_1.jpg",
+    photo: `${process.env.PUBLIC_URL}/images/cp_emerald_1.jpg`,
     tag: "Portfolio",
     tagGr: "Χαρτοφυλάκιο",
     title: "Completed Projects",
@@ -58,7 +58,7 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="hp-hero">
-        <img src="/images/hero.jpg" alt="" className="hp-hero-bg"
+        <img src={process.env.PUBLIC_URL + "/images/hero.jpg"} alt="" className="hp-hero-bg"
           onError={e => { e.target.src = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=90"; }}
         />
         <div className="hp-hero-overlay" />
@@ -173,7 +173,7 @@ export default function Home() {
       {/* ── MANAGEMENT ── */}
       <div className="hp-mgmt-strip">
         <div className="hp-mgmt-bg">
-          <img src="/images/koukaki_living.jpg" alt="Property Management"
+          <img src={process.env.PUBLIC_URL + "/images/koukaki_living.jpg"} alt="Property Management"
             onError={e => { e.target.src = "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=800&q=80"; }}
           />
         </div>

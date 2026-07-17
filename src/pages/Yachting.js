@@ -9,7 +9,7 @@ export default function Yachting() {
   return (
     <div className="sub-page">
       <div className="yacht-hero">
-        <img src="/images/yacht-frog.jpg" alt="Our Fleet" className="yacht-hero-bg"
+        <img src={process.env.PUBLIC_URL + "/images/yacht-frog.jpg"} alt="Our Fleet" className="yacht-hero-bg"
           onError={e => { e.target.src = "https://images.unsplash.com/photo-1567899378494-47b22a2ae96a?w=1600&q=80"; }}
         />
         <div className="yacht-hero-overlay" />

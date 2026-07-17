@@ -7,11 +7,11 @@ export const constructionProjects = [
     status: "Under Construction",
     completion: "Q4 2026",
     units: 4,
-    cover: "/images/construction1.jpg",
+    cover: `${process.env.PUBLIC_URL}/images/construction1.jpg`,
     gallery: [
-      "/images/construction1.jpg",
-      "/images/construction2.jpg",
-      "/images/construction3.jpg",
+      `${process.env.PUBLIC_URL}/images/construction1.jpg`,
+      `${process.env.PUBLIC_URL}/images/construction2.jpg`,
+      `${process.env.PUBLIC_URL}/images/construction3.jpg`,
     ],
     desc: "A private complex of stone villas rising from the Mykonos hillside in the Cycladic tradition. Raw stone exteriors, sweeping Aegean views, and craftsmanship built to last generations.",
     specs: [
@@ -30,9 +30,9 @@ export const constructionProjects = [
     status: "Completed",
     completion: "2025",
     units: 3,
-    cover: "/images/construction4.jpg",
+    cover: `${process.env.PUBLIC_URL}/images/construction4.jpg`,
     gallery: [
-      "/images/construction4.jpg",
+      `${process.env.PUBLIC_URL}/images/construction4.jpg`,
     ],
     desc: "A bold urban renovation in the heart of Athens — a two-storey residence with a distinctive olive-green facade, rooftop terrace, and modern interiors designed for city living at its finest.",
     specs: [

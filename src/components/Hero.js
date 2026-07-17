@@ -6,7 +6,7 @@ export default function Hero() {
   return (
     <section className="hero" id="home">
       <div className="hero-img">
-        <img src="/images/hero.jpg" alt="Acropolis view Athens" />
+        <img src={process.env.PUBLIC_URL + "/images/hero.jpg"} alt="Acropolis view Athens" />
       </div>
       <div className="hero-content">
         <div className="hero-badge">{h.badge}</div>

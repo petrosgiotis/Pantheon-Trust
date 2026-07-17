@@ -15,7 +15,7 @@ export default function AthensStays() {
           <p className="sh-sub">{en ? "Designer apartments in the heart of Athens — from Acropolis views to rooftop terraces over the ancient city." : "Designer διαμερίσματα στην καρδιά της Αθήνας — από θέα Ακρόπολη έως ταράτσες πάνω από την αρχαία πόλη."}</p>
         </div>
         <div className="sh-img">
-          <img src="/images/airbnb1_living.jpg" alt="" />
+          <img src={process.env.PUBLIC_URL + "/images/airbnb1_living.jpg"} alt="" />
         </div>
       </div>
 

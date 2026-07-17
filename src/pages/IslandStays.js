@@ -15,7 +15,7 @@ export default function IslandStays() {
           <p className="sh-sub sh-sub--light">{en ? "Handpicked stays across Mykonos, Santorini, Paros and the most beautiful islands of the Aegean." : "Επιλεγμένες διαμονές σε Μύκονο, Σαντορίνη, Πάρο και τα ομορφότερα νησιά του Αιγαίου."}</p>
         </div>
         <div className="sh-img">
-          <img src="/images/airbnb2_balcony.jpg" alt="" />
+          <img src={process.env.PUBLIC_URL + "/images/airbnb2_balcony.jpg"} alt="" />
         </div>
       </div>
 

@@ -29,7 +29,7 @@ export default function Management() {
           <p className="sh-sub">{en ? "We handle everything — so your property works for you." : "Αναλαμβάνουμε τα πάντα — ώστε το ακίνητό σας να αποδίδει για εσάς."}</p>
         </div>
         <div className="sh-img">
-          <img src="/images/airbnb1_living.jpg" alt="" />
+          <img src={process.env.PUBLIC_URL + "/images/airbnb1_living.jpg"} alt="" />
         </div>
       </div>
 

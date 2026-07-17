@@ -15,7 +15,7 @@ export default function Constructions() {
           <p className="sh-sub sh-sub--light">{en ? "Award-winning villas, apartments and buildings crafted with Cycladic stone and modern precision." : "Βραβευμένες βίλες, διαμερίσματα και κτίρια με κυκλαδίτικη πέτρα και σύγχρονη ακρίβεια."}</p>
         </div>
         <div className="sh-img">
-          <img src="/images/construction1.jpg" alt="" />
+          <img src={process.env.PUBLIC_URL + "/images/construction1.jpg"} alt="" />
         </div>
       </div>
 

@@ -62,7 +62,22 @@
       "Bash(git init *)",
       "Bash(git remote *)",
       "Bash(git add *)",
-      "Bash(git commit *)"
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Read(//Users/petrosgiotis/**)",
+      "Bash(ssh -T git@github.com)",
+      "Bash(ssh-keygen -t ed25519 -C \"petrosgiotis15@gmail.com\" -f ~/.ssh/github_pantheon -N \"\")",
+      "Bash(git subtree *)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://petrosgiotis.github.io/Pantheon-Trust/)",
+      "Bash(curl -s https://petrosgiotis.github.io/Pantheon-Trust/)",
+      "Bash(curl -s https://petrosgiotis.github.io/Pantheon-Trust/static/js/main.79e86255.js)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://petrosgiotis.github.io/Pantheon-Trust/images/cp_emerald_1.jpg)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://petrosgiotis.github.io/Pantheon-Trust/images/hero.jpg)",
+      "Bash(md5 /Users/petrosgiotis/Desktop/pantheon-v2/public/images/cp_emerald_1.jpg /Users/petrosgiotis/Desktop/pantheon-v2/build/images/cp_emerald_1.jpg)",
+      "Bash(xargs perl -i -pe 's|src=\"/images/\\([^\"]+\\)\"|src={process.env.PUBLIC_URL + \"/images/$1\"}|g')",
+      "Bash(xargs perl -i -pe 's|\"\\(/images/[^\"]+\\\\.\\(jpg|png|jpeg|gif|webp\\)\\)\"|`\\\\${process.env.PUBLIC_URL}$1`|g')",
+      "Bash(xargs perl -i -pe 's{src=\"/images/\\([^\"]+\\)\"}{src={process.env.PUBLIC_URL + \"/images/$1\"}}g')",
+      "Bash(xargs perl -i -pe 's{\"\\(/images/[^\"]+\\\\.\\(?:jpg|png|jpeg|gif|webp\\)\\)\"}{`\\\\${process.env.PUBLIC_URL}$1`}g')"
     ]
   }
 }

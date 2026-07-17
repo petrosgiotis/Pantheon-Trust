@@ -14,7 +14,7 @@ const experiences = [
   },
   {
     to: "/clients/athens",
-    img: "/images/airbnb1_living.jpg",
+    img: `${process.env.PUBLIC_URL}/images/airbnb1_living.jpg`,
     tag: "Athens Stays",
     tagGr: "Αθήνα",
     title: "Book Athens",
@@ -24,7 +24,7 @@ const experiences = [
   },
   {
     to: "/clients/islands",
-    img: "/images/airbnb2_balcony.jpg",
+    img: `${process.env.PUBLIC_URL}/images/airbnb2_balcony.jpg`,
     tag: "Island Getaways",
     tagGr: "Ελληνικά Νησιά",
     title: "Book the Islands",
@@ -34,7 +34,7 @@ const experiences = [
   },
   {
     to: "/clients/yachting",
-    img: "/images/yacht-uptime.jpg",
+    img: `${process.env.PUBLIC_URL}/images/yacht-uptime.jpg`,
     tag: "Private Yachting",
     tagGr: "Ιδιωτικό Yachting",
     title: "Book Yachting",
@@ -52,7 +52,7 @@ export default function ClientsHome() {
     <div className="portal-page">
       {/* Hero */}
       <div className="portal-hero portal-hero--clients">
-        <img src="/images/hero.jpg" alt="" className="portal-hero-bg" />
+        <img src={process.env.PUBLIC_URL + "/images/hero.jpg"} alt="" className="portal-hero-bg" />
         <div className="portal-hero-overlay" />
         <div className="portal-hero-content">
           <div className="ph-badge">{en ? "Curated Experiences" : "Επιμελημένες Εμπειρίες"}</div>
