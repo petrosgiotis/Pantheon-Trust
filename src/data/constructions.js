@@ -1,0 +1,46 @@
+export const constructionProjects = [
+  {
+    id: "c1",
+    type: "Villa Complex",
+    title: "Mykonos Stone Villas",
+    location: "Mykonos, Cyclades",
+    status: "Under Construction",
+    completion: "Q4 2026",
+    units: 4,
+    cover: "/images/construction1.jpg",
+    gallery: [
+      "/images/construction1.jpg",
+      "/images/construction2.jpg",
+      "/images/construction3.jpg",
+    ],
+    desc: "A private complex of stone villas rising from the Mykonos hillside in the Cycladic tradition. Raw stone exteriors, sweeping Aegean views, and craftsmanship built to last generations.",
+    specs: [
+      { label: "Units", val: "4 Villas" },
+      { label: "Plot", val: "6,500 m²" },
+      { label: "Style", val: "Cycladic Stone" },
+      { label: "Completion", val: "Q4 2026" },
+    ],
+    features: ["Stone Exteriors", "Private Pools", "Sea Views", "Cycladic Architecture", "Smart Home"],
+  },
+  {
+    id: "c2",
+    type: "Urban Renovation",
+    title: "Athens Green Residence",
+    location: "Athens City Centre",
+    status: "Completed",
+    completion: "2025",
+    units: 3,
+    cover: "/images/construction4.jpg",
+    gallery: [
+      "/images/construction4.jpg",
+    ],
+    desc: "A bold urban renovation in the heart of Athens — a two-storey residence with a distinctive olive-green facade, rooftop terrace, and modern interiors designed for city living at its finest.",
+    specs: [
+      { label: "Total Area", val: "320 m²" },
+      { label: "Floors", val: "2 + Roof" },
+      { label: "Location", val: "Athens Centre" },
+      { label: "Completion", val: "2025" },
+    ],
+    features: ["Rooftop Terrace", "Modern Renovation", "City Centre", "A/C", "Energy Efficient"],
+  },
+];
