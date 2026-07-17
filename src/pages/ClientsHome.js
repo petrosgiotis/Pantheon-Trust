@@ -14,7 +14,7 @@ const experiences = [
   },
   {
     to: "/clients/athens",
-    img: `${process.env.PUBLIC_URL}/images/airbnb1_living.jpg`,
+    img: process.env.PUBLIC_URL + "/images/airbnb1_living.jpg",
     tag: "Athens Stays",
     tagGr: "Αθήνα",
     title: "Book Athens",
@@ -24,7 +24,7 @@ const experiences = [
   },
   {
     to: "/clients/islands",
-    img: `${process.env.PUBLIC_URL}/images/airbnb2_balcony.jpg`,
+    img: process.env.PUBLIC_URL + "/images/airbnb2_balcony.jpg",
     tag: "Island Getaways",
     tagGr: "Ελληνικά Νησιά",
     title: "Book the Islands",
@@ -34,7 +34,7 @@ const experiences = [
   },
   {
     to: "/clients/yachting",
-    img: `${process.env.PUBLIC_URL}/images/yacht-uptime.jpg`,
+    img: process.env.PUBLIC_URL + "/images/yacht-uptime.jpg",
     tag: "Private Yachting",
     tagGr: "Ιδιωτικό Yachting",
     title: "Book Yachting",

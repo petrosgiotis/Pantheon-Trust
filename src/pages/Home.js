@@ -7,7 +7,7 @@ import { useAdminData } from "../context/AdminDataContext";
 const services = [
   {
     to: "/partners/brokerage",
-    photo: `${process.env.PUBLIC_URL}/images/brokerage1.jpg`,
+    photo: process.env.PUBLIC_URL + "/images/brokerage1.jpg",
     tag: "Brokerage",
     tagGr: "Μεσιτεία",
     title: "Property Listings",
@@ -17,7 +17,7 @@ const services = [
   },
   {
     to: "/partners/constructions",
-    photo: `${process.env.PUBLIC_URL}/images/construction1.jpg`,
+    photo: process.env.PUBLIC_URL + "/images/construction1.jpg",
     tag: "Constructions",
     tagGr: "Κατασκευές",
     title: "Our Projects",
@@ -27,7 +27,7 @@ const services = [
   },
   {
     to: "/partners/management",
-    photo: `${process.env.PUBLIC_URL}/images/koukaki_living.jpg`,
+    photo: process.env.PUBLIC_URL + "/images/koukaki_living.jpg",
     tag: "Management",
     tagGr: "Διαχείριση",
     title: "Property Management",
@@ -37,7 +37,7 @@ const services = [
   },
   {
     to: "/partners/completed",
-    photo: `${process.env.PUBLIC_URL}/images/cp_emerald_1.jpg`,
+    photo: process.env.PUBLIC_URL + "/images/cp_emerald_1.jpg",
     tag: "Portfolio",
     tagGr: "Χαρτοφυλάκιο",
     title: "Completed Projects",

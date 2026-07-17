@@ -4,7 +4,7 @@ import { useLang } from "../context/LanguageContext";
 const services = [
   {
     to: "/partners/brokerage",
-    img: `${process.env.PUBLIC_URL}/images/brokerage1.jpg`,
+    img: process.env.PUBLIC_URL + "/images/brokerage1.jpg",
     tag: "Brokerage",
     tagGr: "Μεσιτεία",
     title: "Property Listings",
@@ -14,7 +14,7 @@ const services = [
   },
   {
     to: "/partners/constructions",
-    img: `${process.env.PUBLIC_URL}/images/construction1.jpg`,
+    img: process.env.PUBLIC_URL + "/images/construction1.jpg",
     tag: "Constructions",
     tagGr: "Κατασκευές",
     title: "Our Projects",
@@ -24,7 +24,7 @@ const services = [
   },
   {
     to: "/partners/management",
-    img: `${process.env.PUBLIC_URL}/images/airbnb1_living.jpg`,
+    img: process.env.PUBLIC_URL + "/images/airbnb1_living.jpg",
     tag: "Property Management",
     tagGr: "Διαχείριση Ακινήτων",
     title: "Asset Management",
@@ -34,7 +34,7 @@ const services = [
   },
   {
     to: "/partners/yachting",
-    img: `${process.env.PUBLIC_URL}/images/yacht-frog.jpg`,
+    img: process.env.PUBLIC_URL + "/images/yacht-frog.jpg",
     tag: "Private Yachting",
     tagGr: "Ιδιωτικό Yachting",
     title: "Yacht Charter",

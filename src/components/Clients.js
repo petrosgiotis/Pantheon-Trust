@@ -4,7 +4,7 @@ const ISLAND_PH = "https://images.unsplash.com/photo-1570077188670-e3a8d69ac5ff?
 
 const yachts = [
   {
-    img: `${process.env.PUBLIC_URL}/images/yacht-uptime.jpg`,
+    img: process.env.PUBLIC_URL + "/images/yacht-uptime.jpg",
     name: "S/Y UPTIME",
     model: "Beneteau Oceanis 62",
     tag: "Sailing Yacht",
@@ -14,7 +14,7 @@ const yachts = [
     ],
   },
   {
-    img: `${process.env.PUBLIC_URL}/images/yacht-frog.jpg`,
+    img: process.env.PUBLIC_URL + "/images/yacht-frog.jpg",
     name: "M/Y FROG",
     model: "Riva Vertigo 63",
     tag: "Riva · Italy",
@@ -24,7 +24,7 @@ const yachts = [
     ],
   },
   {
-    img: `${process.env.PUBLIC_URL}/images/yacht-tranquillius.jpg`,
+    img: process.env.PUBLIC_URL + "/images/yacht-tranquillius.jpg",
     name: "M/Y TRANQUILLIUS",
     model: "Riva Rivale 52",
     tag: "Riva · Italy",
@@ -40,25 +40,25 @@ export default function Clients() {
   const c = t.clients;
 
   const cards = [
-    { key:"athens1", img:`${process.env.PUBLIC_URL}/images/airbnb1_living.jpg`, info: c.athens1 },
-    { key:"athens2", img:`${process.env.PUBLIC_URL}/images/airbnb2_living.jpg`, info: c.athens2 },
+    { key:"athens1", img:process.env.PUBLIC_URL + "/images/airbnb1_living.jpg", info: c.athens1 },
+    { key:"athens2", img:process.env.PUBLIC_URL + "/images/airbnb2_living.jpg", info: c.athens2 },
     { key:"islands", img: ISLAND_PH,                  info: c.islands  },
-    { key:"yachting",img:`${process.env.PUBLIC_URL}/images/yacht-frog.jpg`,     info: c.yachting },
+    { key:"yachting",img:process.env.PUBLIC_URL + "/images/yacht-frog.jpg",     info: c.yachting },
   ];
 
   const athens1Gallery = [
-    `${process.env.PUBLIC_URL}/images/airbnb1_bedroom.jpg`,
-    `${process.env.PUBLIC_URL}/images/airbnb1_living.jpg`,
-    `${process.env.PUBLIC_URL}/images/airbnb1_dining.jpg`,
-    `${process.env.PUBLIC_URL}/images/airbnb1_balcony.jpg`,
-    `${process.env.PUBLIC_URL}/images/hero.jpg`,
+    process.env.PUBLIC_URL + "/images/airbnb1_bedroom.jpg",
+    process.env.PUBLIC_URL + "/images/airbnb1_living.jpg",
+    process.env.PUBLIC_URL + "/images/airbnb1_dining.jpg",
+    process.env.PUBLIC_URL + "/images/airbnb1_balcony.jpg",
+    process.env.PUBLIC_URL + "/images/hero.jpg",
   ];
 
   const athens2Gallery = [
-    `${process.env.PUBLIC_URL}/images/airbnb2_living.jpg`,
-    `${process.env.PUBLIC_URL}/images/airbnb2_bedroom.jpg`,
-    `${process.env.PUBLIC_URL}/images/airbnb2_balcony.jpg`,
-    `${process.env.PUBLIC_URL}/images/airbnb2_bath.jpg`,
+    process.env.PUBLIC_URL + "/images/airbnb2_living.jpg",
+    process.env.PUBLIC_URL + "/images/airbnb2_bedroom.jpg",
+    process.env.PUBLIC_URL + "/images/airbnb2_balcony.jpg",
+    process.env.PUBLIC_URL + "/images/airbnb2_bath.jpg",
   ];
 
   return (
