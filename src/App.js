@@ -36,7 +36,7 @@ export default function App() {
   return (
     <LanguageProvider>
       <AdminDataProvider>
-        <BrowserRouter basename="/Pantheon-Trust">
+        <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
 

@@ -2,7 +2,7 @@
   "name": "pantheon-trust-group",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://petrosgiotis.github.io/Pantheon-Trust",
+  "homepage": "https://pantheon-trust.netlify.app",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

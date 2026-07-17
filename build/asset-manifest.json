@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/Pantheon-Trust/static/css/main.4dd3dbf6.css",
-    "main.js": "/Pantheon-Trust/static/js/main.e2d79565.js",
-    "index.html": "/Pantheon-Trust/index.html",
-    "main.4dd3dbf6.css.map": "/Pantheon-Trust/static/css/main.4dd3dbf6.css.map",
-    "main.e2d79565.js.map": "/Pantheon-Trust/static/js/main.e2d79565.js.map"
+    "main.css": "/static/css/main.4dd3dbf6.css",
+    "main.js": "/static/js/main.a5ffb1d7.js",
+    "index.html": "/index.html",
+    "main.4dd3dbf6.css.map": "/static/css/main.4dd3dbf6.css.map",
+    "main.a5ffb1d7.js.map": "/static/js/main.a5ffb1d7.js.map"
   },
   "entrypoints": [
     "static/css/main.4dd3dbf6.css",
-    "static/js/main.e2d79565.js"
+    "static/js/main.a5ffb1d7.js"
   ]
 }
