@@ -4,6 +4,7 @@ import { useLang } from "../context/LanguageContext";
 
 export default function DetailPage({ item, backTo, backLabel, type = "property" }) {
   const [activeImg, setActiveImg] = useState(0);
+  const [lightbox, setLightbox] = useState(false);
   const [sent, setSent] = useState(false);
   const { lang } = useLang();
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ export default function DetailPage({ item, backTo, backLabel, type = "property" 
       <div className="detail-inner">
         {/* Gallery */}
         <div className="detail-gallery">
-          <div className="dg-main">
+          <div className="dg-main" onClick={() => setLightbox(true)} style={{ cursor: "zoom-in" }}>
             <img
               src={gallery[activeImg]}
               alt={item.title || item.name}
@@ -52,7 +53,7 @@ export default function DetailPage({ item, backTo, backLabel, type = "property" 
           {gallery.length > 1 && (
             <div className="dg-thumbs">
               {gallery.map((src, i) => (
-                <button key={i} className={`dg-thumb${i === activeImg ? " active" : ""}`} onClick={() => setActiveImg(i)}>
+                <button key={i} className={`dg-thumb${i === activeImg ? " active" : ""}`} onClick={() => { setActiveImg(i); setLightbox(true); }}>
                   <img src={src} alt=""
                     onError={e => { e.target.src = "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=400&q=80"; }}
                   />
@@ -153,6 +154,22 @@ export default function DetailPage({ item, backTo, backLabel, type = "property" 
           </div>
         </div>
       </div>
+
+      {lightbox && (
+        <div className="lb-overlay" onClick={() => setLightbox(false)}>
+          <button className="lb-close" onClick={() => setLightbox(false)}>✕</button>
+          <button className="lb-prev" onClick={e => { e.stopPropagation(); setActiveImg(i => (i - 1 + gallery.length) % gallery.length); }}>‹</button>
+          <img
+            className="lb-img"
+            src={gallery[activeImg]}
+            alt={item.title || item.name}
+            onClick={e => e.stopPropagation()}
+            onError={e => { e.target.src = "https://images.unsplash.com/photo-1613395877344-13d4a8e0d49e?w=1600&q=80"; }}
+          />
+          <button className="lb-next" onClick={e => { e.stopPropagation(); setActiveImg(i => (i + 1) % gallery.length); }}>›</button>
+          <div className="lb-counter">{activeImg + 1} / {gallery.length}</div>
+        </div>
+      )}
     </div>
   );
 }
