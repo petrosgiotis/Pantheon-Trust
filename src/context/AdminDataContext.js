@@ -3,7 +3,7 @@ import { brokerageListings as defaultListings } from "../data/brokerage";
 import { constructionProjects as defaultProjects } from "../data/constructions";
 import { completedProjects as defaultCompleted } from "../data/completed";
 
-const DATA_VERSION = "v4";
+const DATA_VERSION = "v5";
 const STORAGE_KEYS = {
   listings:          `ptg_listings_${DATA_VERSION}`,
   projects:          `ptg_projects_${DATA_VERSION}`,
