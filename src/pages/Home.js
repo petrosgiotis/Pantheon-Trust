@@ -11,10 +11,10 @@ const services = [
     photo: process.env.PUBLIC_URL + "/images/brokerage1.jpg",
     tag: "Consultancy",
     tagGr: "Συμβουλευτική",
-    title: "Property Advisory",
+    title: "Advisory Services",
     titleGr: "Συμβουλευτική Ακινήτων",
-    desc: "Strategic advisory on residential, commercial and land acquisitions across Athens and the Greek islands.",
-    descGr: "Στρατηγική συμβουλευτική για αγορά κατοικιών, χώρων και γης σε Αθήνα και νησιά.",
+    desc: "Expert guidance on acquisitions, valuations, and investment strategy across Athens and the Greek islands.",
+    descGr: "Εξειδικευμένη καθοδήγηση για αγορές, αποτιμήσεις και επενδυτική στρατηγική.",
   },
   {
     to: "/partners/constructions",
@@ -51,7 +51,7 @@ const services = [
 export default function Home() {
   const { lang } = useLang();
   const en = lang === "en";
-  const { listings: brokerageListings, projects: constructionProjects, completedProjects } = useAdminData();
+  const { projects: constructionProjects, completedProjects } = useAdminData();
   const heroBgRef = useRef(null);
   const mgmtBgRef = useRef(null);
 
@@ -86,10 +86,15 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="hp-hero">
-        <img ref={heroBgRef} src={process.env.PUBLIC_URL + "/images/hero.jpg"} alt="" className="hp-hero-bg"
-          style={{ willChange: "transform" }}
-          onError={e => { e.target.src = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=90"; }}
-        />
+        <video
+          ref={heroBgRef}
+          className="hp-hero-bg"
+          style={{ willChange: "transform", objectFit: "cover" }}
+          autoPlay muted loop playsInline
+        >
+          <source src={process.env.PUBLIC_URL + "/images/hero.mp4"} type="video/mp4" />
+        </video>
+        {/* photo fallback rendered as background if video fails */}
         <div className="hp-hero-overlay" />
         <div className="hp-hero-content">
           <p className="hp-hero-eyebrow">Athens, Greece</p>
@@ -164,38 +169,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── CONSULTANCY ── */}
-      <section className="hp-section hp-section--white" id="brokerage">
+      {/* ── CONSULTANCY CTA ── */}
+      <section className="hp-section hp-section--white" id="consultancy">
         <div className="hp-section-head">
-          <span className="hp-eyebrow">{en ? "Available Properties" : "Διαθέσιμα Ακίνητα"}</span>
+          <span className="hp-eyebrow">{en ? "Expert Guidance" : "Εξειδικευμένη Καθοδήγηση"}</span>
           <h2 className="hp-section-title">
-            {en ? <>Property <em>Listings</em></> : <>Αγγελίες <em>Ακινήτων</em></>}
+            {en ? <>Real Estate <em>Consultancy</em></> : <>Συμβουλευτική <em>Ακινήτων</em></>}
           </h2>
+          <p className="hp-section-sub">
+            {en
+              ? "We guide buyers, sellers and investors through every stage — from market analysis and property identification to negotiation and closing."
+              : "Καθοδηγούμε αγοραστές, πωλητές και επενδυτές σε κάθε στάδιο — από ανάλυση αγοράς έως ολοκλήρωση συναλλαγής."}
+          </p>
         </div>
-        <div className="hp-listings-grid">
-          {brokerageListings.map(b => (
-            <Link to={`/partners/brokerage/${b.id}`} key={b.id} className="hp-listing-card">
-              <div className="hp-listing-img">
-                <img src={b.cover} alt={b.title} loading="lazy"
-                  onError={e => { e.target.src = "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"; }}
-                />
-                <div className="hp-listing-tag">{b.tag}</div>
-              </div>
-              <div className="hp-listing-body">
-                <div className="hp-listing-type">{b.type}</div>
-                <h3 className="hp-listing-title">{b.title}</h3>
-                <p className="hp-listing-loc">{b.location}</p>
-                <div className="hp-listing-meta">
-                  <span>{b.area}</span>
-                  {b.bedrooms && <span>{b.bedrooms} {en ? "bed" : "υπν."}</span>}
-                  <span className="hp-listing-price">{b.price}</span>
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
-        <div className="hp-section-footer">
-          <Link to="/partners/brokerage" className="btn-n">{en ? "All Listings" : "Όλες οι Αγγελίες"}</Link>
+        <div className="hp-section-footer" style={{ marginTop: "2rem" }}>
+          <Link to="/partners/brokerage" className="btn-g">{en ? "Explore Advisory Services" : "Δείτε τις Υπηρεσίες"}</Link>
         </div>
       </section>
 
