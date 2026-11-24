@@ -700,6 +700,109 @@ button { font-family: var(--body); cursor: pointer; }
 .hp-section-sub--light { color: rgba(255,255,255,0.55); }
 .hp-section-footer { text-align: center; margin-top: 5rem; }
 
+/* ── INTRO ── */
+.hp-intro { }
+.hp-intro-inner { max-width: 820px; }
+.hp-intro-text {
+  margin-top: 2rem; font-size: 1.1rem; color: var(--gray);
+  line-height: 1.9; font-weight: 300; max-width: 680px;
+}
+
+/* ── CONSULTANCY SPLIT ── */
+.hp-consult { }
+.hp-consult-layout {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 7rem;
+  align-items: center; max-width: 1400px; margin: 0 auto;
+}
+.hp-consult-photo { overflow: hidden; }
+.hp-consult-photo img { width: 100%; aspect-ratio: 3/4; object-fit: cover; display: block; }
+.hp-consult-body { }
+.hp-consult-lead {
+  font-size: 1.05rem; color: var(--gray); line-height: 1.9;
+  font-weight: 300; margin: 1.5rem 0 2.5rem;
+}
+.hp-consult-list {
+  list-style: none; display: flex; flex-direction: column; gap: 2rem;
+  margin-bottom: 3rem;
+}
+.hp-consult-list li {
+  display: flex; flex-direction: column; gap: 0.3rem;
+  padding-left: 1.4rem; border-left: 2px solid var(--gold);
+}
+.hp-consult-list li strong {
+  font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--navy); font-weight: 500;
+}
+.hp-consult-list li span {
+  font-size: 0.95rem; color: var(--gray); line-height: 1.75; font-weight: 300;
+}
+
+/* ── THREE PILLARS ── */
+.hp-pillars { }
+.hp-pillars-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: var(--light); max-width: 1400px; margin: 0 auto;
+}
+.hp-pillar {
+  background: #fff; padding: 4rem 3.5rem;
+  display: flex; flex-direction: column; gap: 1.2rem;
+  transition: background 0.4s var(--ease);
+  cursor: pointer;
+}
+.hp-pillar:hover { background: var(--navy); }
+.hp-pillar-num {
+  font-family: var(--display); font-size: 3.5rem; font-weight: 400;
+  color: var(--light); line-height: 1; transition: color 0.4s;
+}
+.hp-pillar:hover .hp-pillar-num { color: rgba(201,169,110,0.25); }
+.hp-pillar-title {
+  font-family: var(--display); font-size: 2rem; font-weight: 400;
+  color: var(--navy); line-height: 1.1; transition: color 0.4s;
+}
+.hp-pillar:hover .hp-pillar-title { color: var(--white); }
+.hp-pillar-desc {
+  font-size: 0.95rem; color: var(--gray); line-height: 1.8;
+  font-weight: 300; flex: 1; transition: color 0.4s;
+}
+.hp-pillar:hover .hp-pillar-desc { color: rgba(255,255,255,0.55); }
+.hp-pillar-cta {
+  font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--gold); transition: color 0.4s;
+}
+.hp-pillar:hover .hp-pillar-cta { color: var(--gold3); }
+
+/* ── PORTFOLIO STRIP ── */
+.hp-portfolio-strip {
+  position: relative; height: 80vh; min-height: 560px;
+  display: flex; align-items: center; justify-content: flex-start;
+  overflow: hidden;
+}
+.hp-portfolio-bg {
+  position: absolute; inset: 0; overflow: hidden;
+}
+.hp-portfolio-bg img {
+  width: 100%; height: 130%; object-fit: cover; display: block;
+  object-position: center;
+}
+.hp-portfolio-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to right, rgba(5,10,20,0.88) 0%, rgba(5,10,20,0.4) 60%, transparent 100%);
+}
+.hp-portfolio-content {
+  position: relative; z-index: 2;
+  padding: 0 7rem; max-width: 640px;
+  display: flex; flex-direction: column; gap: 1.8rem; align-items: flex-start;
+}
+.hp-portfolio-title {
+  font-family: var(--display); font-size: clamp(2.8rem, 5vw, 4.5rem);
+  font-weight: 400; color: var(--white); line-height: 1.08;
+}
+.hp-portfolio-title em { font-style: italic; color: var(--gold); }
+.hp-portfolio-sub {
+  font-size: 1rem; color: rgba(255,255,255,0.65); line-height: 1.8;
+  font-weight: 300;
+}
+
 /* ── SERVICES — tall photo cards ── */
 .hp-services-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem;
@@ -924,22 +1027,25 @@ button { font-family: var(--body); cursor: pointer; }
   .hp-services-grid { grid-template-columns: repeat(2, 1fr); }
   .hp-listings-grid { grid-template-columns: repeat(2, 1fr); }
   .hp-yachts-grid   { grid-template-columns: repeat(2, 1fr); }
+  .hp-consult-layout { gap: 4rem; }
 }
 @media (max-width: 900px) {
-  .hp-section { padding: 5rem 2rem; }
+  .hp-section { padding: 5rem 2.5rem; }
   .hp-hero-content { padding: 0 2.5rem 4rem; }
-  .hp-project-card { grid-template-columns: 1fr; }
-  .hp-project-card:nth-child(even) .hp-project-img { order: 0; }
-  .hp-project-card:nth-child(even) .hp-project-body { order: 0; }
-  .hp-project-body { padding: 3rem 2.5rem; }
+  .hp-consult-layout { grid-template-columns: 1fr; gap: 3rem; }
+  .hp-consult-photo { display: none; }
+  .hp-pillars-grid { grid-template-columns: 1fr; }
+  .hp-pillar { padding: 3rem 2.5rem; }
   .hp-mgmt-strip { grid-template-columns: 1fr; }
   .hp-mgmt-bg { min-height: 350px; }
   .hp-mgmt-content { padding: 4rem 2.5rem; }
+  .hp-portfolio-content { padding: 0 2.5rem; max-width: 100%; }
 }
 @media (max-width: 640px) {
   .hp-services-grid { grid-template-columns: 1fr; }
   .hp-listings-grid { grid-template-columns: 1fr; }
   .hp-yachts-grid   { grid-template-columns: 1fr; }
+  .hp-portfolio-strip { height: 70vh; }
 }
 
 /* ═══════════════════════════════════════════
