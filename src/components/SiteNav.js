@@ -20,7 +20,7 @@ export default function SiteNav() {
   useEffect(() => { setMenuOpen(false); }, [location]);
 
   const partnersLinks = [
-    { to: "/partners/brokerage",    label: lang === "en" ? "Brokerage" : "Μεσιτεία" },
+    { to: "/partners/brokerage",    label: lang === "en" ? "Consultancy" : "Συμβουλευτική" },
     { to: "/partners/constructions", label: lang === "en" ? "Projects" : "Έργα" },
     { to: "/partners/management",   label: lang === "en" ? "Management" : "Διαχείριση" },
     { to: "/partners/completed",    label: lang === "en" ? "Completed" : "Ολοκληρωμένα" },

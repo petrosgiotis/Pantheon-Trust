@@ -10,9 +10,9 @@ export default function Brokerage() {
     <div className="sub-page">
       <div className="sub-hero sub-hero--cream">
         <div className="sh-content">
-          <div className="sh-badge">{en ? "Brokerage" : "Μεσιτεία"}</div>
-          <h1 className="sh-title">{en ? <>Premium<br /><em>Property Listings</em></> : <>Premium<br /><em>Ακίνητα</em></>}</h1>
-          <p className="sh-sub">{en ? "Exclusive residential, commercial and land transactions across Athens and the Greek islands." : "Αποκλειστικές αγοραπωλησίες κατοικιών, επαγγελματικών χώρων και γης σε Αθήνα και νησιά."}</p>
+          <div className="sh-badge">{en ? "Consultancy" : "Συμβουλευτική"}</div>
+          <h1 className="sh-title">{en ? <>Property<br /><em>Advisory</em></> : <>Συμβουλευτική<br /><em>Ακινήτων</em></>}</h1>
+          <p className="sh-sub">{en ? "Strategic guidance on residential, commercial and land acquisitions across Athens and the Greek islands." : "Στρατηγική καθοδήγηση για αγορά κατοικιών, επαγγελματικών χώρων και γης σε Αθήνα και νησιά."}</p>
         </div>
         <div className="sh-img">
           <img src={process.env.PUBLIC_URL + "/images/brokerage1.jpg"} alt="" />

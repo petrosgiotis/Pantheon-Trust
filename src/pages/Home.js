@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useLang } from "../context/LanguageContext";
+import { useEffect, useRef } from "react";
 import SiteNav from "../components/SiteNav";
 import SiteFooter from "../components/SiteFooter";
 import { useAdminData } from "../context/AdminDataContext";
@@ -8,12 +9,12 @@ const services = [
   {
     to: "/partners/brokerage",
     photo: process.env.PUBLIC_URL + "/images/brokerage1.jpg",
-    tag: "Brokerage",
-    tagGr: "Μεσιτεία",
-    title: "Property Listings",
-    titleGr: "Ακίνητα",
-    desc: "Residential, commercial and land transactions across Athens and the Greek islands.",
-    descGr: "Αγοραπωλησίες κατοικιών, χώρων και γης σε Αθήνα και νησιά.",
+    tag: "Consultancy",
+    tagGr: "Συμβουλευτική",
+    title: "Property Advisory",
+    titleGr: "Συμβουλευτική Ακινήτων",
+    desc: "Strategic advisory on residential, commercial and land acquisitions across Athens and the Greek islands.",
+    descGr: "Στρατηγική συμβουλευτική για αγορά κατοικιών, χώρων και γης σε Αθήνα και νησιά.",
   },
   {
     to: "/partners/constructions",
@@ -51,6 +52,33 @@ export default function Home() {
   const { lang } = useLang();
   const en = lang === "en";
   const { listings: brokerageListings, projects: constructionProjects, completedProjects } = useAdminData();
+  const heroBgRef = useRef(null);
+  const mgmtBgRef = useRef(null);
+
+  useEffect(() => {
+    const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduced) return;
+
+    const isMobile = window.innerWidth < 768;
+    if (isMobile) return;
+
+    const onScroll = () => {
+      const y = window.scrollY;
+      if (heroBgRef.current) {
+        heroBgRef.current.style.transform = `translateY(${y * 0.3}px)`;
+      }
+      if (mgmtBgRef.current) {
+        const mgmtEl = mgmtBgRef.current.closest(".hp-mgmt-strip");
+        if (mgmtEl) {
+          const rect = mgmtEl.getBoundingClientRect();
+          const offset = (rect.top + rect.height / 2 - window.innerHeight / 2) * 0.2;
+          mgmtBgRef.current.style.transform = `translateY(${offset}px)`;
+        }
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <div className="home-page">
@@ -58,7 +86,8 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="hp-hero">
-        <img src={process.env.PUBLIC_URL + "/images/hero.jpg"} alt="" className="hp-hero-bg"
+        <img ref={heroBgRef} src={process.env.PUBLIC_URL + "/images/hero.jpg"} alt="" className="hp-hero-bg"
+          style={{ willChange: "transform" }}
           onError={e => { e.target.src = "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1600&q=90"; }}
         />
         <div className="hp-hero-overlay" />
@@ -135,7 +164,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── BROKERAGE ── */}
+      {/* ── CONSULTANCY ── */}
       <section className="hp-section hp-section--white" id="brokerage">
         <div className="hp-section-head">
           <span className="hp-eyebrow">{en ? "Available Properties" : "Διαθέσιμα Ακίνητα"}</span>
@@ -172,8 +201,9 @@ export default function Home() {
 
       {/* ── MANAGEMENT ── */}
       <div className="hp-mgmt-strip">
-        <div className="hp-mgmt-bg">
-          <img src={process.env.PUBLIC_URL + "/images/koukaki_living.jpg"} alt="Property Management"
+        <div className="hp-mgmt-bg" style={{ overflow: "hidden" }}>
+          <img ref={mgmtBgRef} src={process.env.PUBLIC_URL + "/images/koukaki_living.jpg"} alt="Property Management"
+            style={{ willChange: "transform" }}
             onError={e => { e.target.src = "https://images.unsplash.com/photo-1556912173-3bb406ef7e77?w=800&q=80"; }}
           />
         </div>

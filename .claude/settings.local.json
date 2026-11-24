@@ -82,7 +82,9 @@
       "Bash(curl -s -o /dev/null -w \"%{http_code}\" \"https://petrosgiotis.github.io/Pantheon-Trust/images/cp_emerald_1.jpg\")",
       "Bash(curl -s \"https://petrosgiotis.github.io/Pantheon-Trust/static/js/main.eb77a370.js\")",
       "Bash(xargs perl -i -pe 's{`\\\\$\\\\{process\\\\.env\\\\.PUBLIC_URL\\\\}\\(/images/[^`]+\\)`}{process.env.PUBLIC_URL + \"$1\"}g')",
-      "Bash(rm -f /Users/petrosgiotis/Desktop/pantheon-v2/.git/index.lock && git add --all -- ':!node_modules' && git commit -m \"Fix image paths — use string concatenation for correct PUBLIC_URL compilation\" && git push origin main && git subtree push --prefix build origin gh-pages 2>&1 | tail -5)"
+      "Bash(rm -f /Users/petrosgiotis/Desktop/pantheon-v2/.git/index.lock && git add --all -- ':!node_modules' && git commit -m \"Fix image paths — use string concatenation for correct PUBLIC_URL compilation\" && git push origin main && git subtree push --prefix build origin gh-pages 2>&1 | tail -5)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://pantheon-trust-group.netlify.app/)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://pantheon-trust-group.netlify.app/images/cp_emerald_1.jpg)"
     ]
   }
 }

@@ -10,8 +10,8 @@ export default function SiteFooter() {
         </div>
         <div className="sf-cols">
           <div className="sf-col">
-            <div className="sf-col-title">Partners</div>
-            <Link to="/partners/brokerage">Brokerage</Link>
+            <div className="sf-col-title">Services</div>
+            <Link to="/partners/brokerage">Consultancy</Link>
             <Link to="/partners/constructions">Constructions</Link>
             <Link to="/partners/management">Property Management</Link>
             <Link to="/partners/completed">Completed Projects</Link>

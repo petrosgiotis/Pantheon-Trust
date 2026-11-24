@@ -5,12 +5,12 @@ const services = [
   {
     to: "/partners/brokerage",
     img: process.env.PUBLIC_URL + "/images/brokerage1.jpg",
-    tag: "Brokerage",
-    tagGr: "Μεσιτεία",
-    title: "Property Listings",
-    titleGr: "Ακίνητα",
-    desc: "Exclusive residential, commercial and land transactions across Athens and the Greek islands.",
-    descGr: "Αποκλειστικές αγοραπωλησίες κατοικιών, επαγγελματικών χώρων και γης.",
+    tag: "Consultancy",
+    tagGr: "Συμβουλευτική",
+    title: "Property Advisory",
+    titleGr: "Συμβουλευτική Ακινήτων",
+    desc: "Strategic advisory on residential, commercial and land acquisitions across Athens and the Greek islands.",
+    descGr: "Στρατηγική συμβουλευτική για αγορά κατοικιών, επαγγελματικών χώρων και γης.",
   },
   {
     to: "/partners/constructions",
